@@ -10,7 +10,7 @@ L'intérêt par ailleurs est de montrer comment utiliser la spécification JSR 3
 
 * Java 11
 * Maven 3.5.3+
-* Docker (uniquement pour le projet [ws-chatwarwebsocket](ws-chatwarwebsocket/)
+* Docker (uniquement pour le projet [ws-chatwarwebsocket](ws-chatwarwebsocket/))
 
 ## Ressources
 
