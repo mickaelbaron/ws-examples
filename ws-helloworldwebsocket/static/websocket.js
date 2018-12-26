@@ -1,0 +1,45 @@
+var ws;
+
+function connect() {
+    var host = document.location.host;
+    var pathname = document.location.pathname;
+
+    ws = new WebSocket(document.getElementById("wsURI").value);
+    ws.onopen = function (evt) {
+        console.log(evt);
+        writeMessage("Connect to WSEndpoint.");
+    };
+    ws.onmessage = function (evt) {
+        console.log(evt);
+        writeMessage(evt.data);
+    };
+    ws.onerror = function (evt) {
+        console.log(evt);
+    };
+    ws.onclose = function (evt) {
+        writeMessage("Disconnect from WSEndpoint.");
+    }
+}
+
+function disConnect() {
+    ws.close();
+}
+
+function writeMessage(pValue) {
+    var newElement = document.createElement("div");
+    newElement.textContent = pValue;
+    var wsMessagesNode = document.getElementById("wsMessages");
+    wsMessagesNode.appendChild(newElement);
+    wsMessagesNode.scrollTop = wsMessagesNode.scrollHeight;
+}
+
+function clearMessages() {
+    var wsMessagesNode = document.getElementById("wsMessages");
+    while (wsMessagesNode.firstChild) {
+        wsMessagesNode.removeChild(wsMessagesNode.firstChild);
+    }
+}
+
+function send() {
+    ws.send(document.getElementById("wsMessage").value);
+}
