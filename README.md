@@ -9,8 +9,8 @@ L'intérêt par ailleurs est de montrer comment utiliser la spécification JSR 3
 ## Prérequis
 
 * Java 11
-* Maven 3.5.3
-* Docker
+* Maven 3.5.3+
+* Docker (uniquement pour le projet [ws-chatwarwebsocket](ws-chatwarwebsocket/)
 
 ## Ressources
 
