@@ -10,7 +10,7 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 
 * À la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 mvn clean package
 ```
 
@@ -18,7 +18,7 @@ mvn clean package
 
 * Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
 déc. 23, 2018 7:36:15 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8025]

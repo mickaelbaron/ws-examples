@@ -10,13 +10,13 @@ Nous montrons également comment déployer les WebSockets clients comme une appl
 
 * Compiler le projet
 
-```bash
+```console
 mvn clean package
 ```
 
 * Exécuter le projet
 
-```bash
+```console
 java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
 déc. 23, 2018 7:36:15 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8025]
@@ -34,7 +34,7 @@ Hit enter to stop it...
 
 * À la racine du projet _ws-chatclientwebsocket_, exécuter la ligne de commande suivante :
 
-```bash
+```console
 mvn clean package
 ```
 
@@ -42,7 +42,7 @@ mvn clean package
 
 * Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatclientwebsocket.ChatClientWebSocketLauncher
 ChatClientEndpoint.onOpen()
 ChatClientEndpoint.onMessage()
@@ -51,9 +51,9 @@ Received message: My First Message (from: mickaelbaron)
 
 ## Comment exécuter le client via l'API `Endpoint`
 
-* Toujours depuis la racine du projet, exécuter la ligne de commande suivante : 
+* Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatclientwebsocket.ChatClientWebSocketUsingAPILauncher
 ChatClientWebSocketUsingAPILauncher.onOpen()
 ChatClientWebSocketUsingAPILauncher.onMessage()

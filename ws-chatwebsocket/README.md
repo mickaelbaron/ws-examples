@@ -1,6 +1,6 @@
 # Projet ws-chatwebsocket
 
-Cet exemple implémente un espace de discussion « chat » en utilisant la spécification JSR 356 et l'implémentation Tyrus. L'intérêt de cet exemple est double. D'une part les *URI-template* sont utilisés pour transmettre des paramètres lors de la phase de connexion. D'autre part deux implémentations différentes d'un WebSocket serveur sont réalisées pour un résultat identique. Ces deux implémentations se basent sur l'utilisation de l'annotation `@ServerEndpoint` et sur l'héritage de la classe `Endpoint`. 
+Cet exemple implémente un espace de discussion « chat » en utilisant la spécification JSR 356 et l'implémentation Tyrus. L'intérêt de cet exemple est double. D'une part les *URI-template* sont utilisés pour transmettre des paramètres lors de la phase de connexion. D'autre part deux implémentations différentes d'un WebSocket serveur sont réalisées pour un résultat identique. Ces deux implémentations se basent sur l'utilisation de l'annotation `@ServerEndpoint` et sur l'héritage de la classe `Endpoint`.
 
 Un client HTML/JavaScript a été développé pour implémenter le WebSocket client et afin de pouvoir tester notre développement (répertoire _static/_). Nous montrons également comment déployer les WebSockets serveurs comme une application Java classique par l'intermédiaire du serveur web Grizzly.
 
@@ -8,7 +8,7 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 
 * À la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 mvn clean package
 ```
 
@@ -16,7 +16,7 @@ mvn clean package
 
 * Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
 déc. 23, 2018 8:06:54 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8026]

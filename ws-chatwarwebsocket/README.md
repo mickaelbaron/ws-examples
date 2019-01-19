@@ -8,7 +8,7 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 
 * À la racine du projet, exécuter la ligne de commande suivante :
 
-```bash
+```console
 mvn clean package
 ```
 
@@ -16,13 +16,13 @@ mvn clean package
 
 * Exécuter la ligne de commande suivante pour télécharger l'image Docker correspondant à la version 9 de Tomcat s'exécutant sous un JRE 11
 
-```bash
+```console
 docker pull tomcat:9-jre11-slim
 ```
 
 * Exécuter la ligne de commande suivante permettant de créer un conteneur Docker
 
-```bash
+```console
 docker run --rm --name chatwarwebsocket-tomcat -v $(pwd)/target/chatwarwebsocket.war:/usr/local/tomcat/webapps/chatwarwebsocket.war -it -p 8080:8080 tomcat:9-jre11-slim
 ```
 
