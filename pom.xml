@@ -19,8 +19,8 @@
 
 	<properties>
 		<websocket.version>1.1</websocket.version>
-		<tyrus.version>1.14</tyrus.version>
-		<jackson-databind.version>2.9.8</jackson-databind.version>
+		<tyrus.version>1.15</tyrus.version>
+		<jackson-databind.version>2.10.2</jackson-databind.version>
 
 		<maven.compiler.version>3.1</maven.compiler.version>
 		<maven.compiler.source>11</maven.compiler.source>
