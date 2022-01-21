@@ -1,6 +1,6 @@
 # Projet ws-chatclientwebsocket
 
-Cet exemple montre comment utiliser la spécification JSR 356 et l'implémentation Tyrus pour développer des WebSockets clients avec le langage Java. Pour tester ces WebSockets clients, vous devrez démarrer le WebSocket serveur du projet [ws-chatwebsocket](../ws-chatwebsocket).
+Cet exemple montre comment utiliser la spécification Jakarta WebSocket (anciennement JSR 356) et l'implémentation Tyrus pour développer des WebSockets clients avec le langage Java. Pour tester ces WebSockets clients, vous devrez démarrer le WebSocket serveur du projet [ws-chatwebsocket](../ws-chatwebsocket).
 
 Nous montrons également comment déployer les WebSockets clients comme une application Java classique.
 
@@ -11,20 +11,20 @@ Nous montrons également comment déployer les WebSockets clients comme une appl
 * Compiler le projet
 
 ```console
-mvn clean package
+$ mvn clean package
 ```
 
 * Exécuter le projet
 
 ```console
 java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
-déc. 23, 2018 7:36:15 PM org.glassfish.grizzly.http.server.NetworkListener start
+janv. 21, 2022 6:53:34 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8025]
-déc. 23, 2018 7:36:15 PM org.glassfish.grizzly.http.server.HttpServer start
+janv. 21, 2022 6:53:34 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-déc. 23, 2018 7:36:15 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:53:34 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket Registered apps: URLs all start with ws://localhost:8025
-déc. 23, 2018 7:36:15 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:53:34 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket server started.
 Tyrus app started available at ws://localhost:8025/helloworldwebsocket
 Hit enter to stop it...
@@ -35,7 +35,7 @@ Hit enter to stop it...
 * À la racine du projet _ws-chatclientwebsocket_, exécuter la ligne de commande suivante :
 
 ```console
-mvn clean package
+$ mvn clean package
 ```
 
 ## Comment exécuter le client via l'annotation `@ClientEndpoint`

@@ -1,6 +1,6 @@
 # Projet ws-chatwebsocket
 
-Cet exemple implémente un espace de discussion « chat » en utilisant la spécification JSR 356 et l'implémentation Tyrus. L'intérêt de cet exemple est double. D'une part les *URI-template* sont utilisés pour transmettre des paramètres lors de la phase de connexion. D'autre part deux implémentations différentes d'un WebSocket serveur sont réalisées pour un résultat identique. Ces deux implémentations se basent sur l'utilisation de l'annotation `@ServerEndpoint` et sur l'héritage de la classe `Endpoint`.
+Cet exemple implémente un espace de discussion « chat » en utilisant la spécification Jakarta WebSocket (anciennement JSR 356) et l'implémentation Tyrus. L'intérêt de cet exemple est double. D'une part les *URI-template* sont utilisés pour transmettre des paramètres lors de la phase de connexion. D'autre part deux implémentations différentes d'un WebSocket serveur sont réalisées pour un résultat identique. Ces deux implémentations se basent sur l'utilisation de l'annotation `@ServerEndpoint` et sur l'héritage de la classe `Endpoint`.
 
 Un client HTML/JavaScript a été développé pour implémenter le WebSocket client et afin de pouvoir tester notre développement (répertoire _static/_). Nous montrons également comment déployer les WebSockets serveurs comme une application Java classique par l'intermédiaire du serveur web Grizzly.
 
@@ -9,7 +9,7 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 * À la racine du projet, exécuter la ligne de commande suivante :
 
 ```console
-mvn clean package
+$ mvn clean package
 ```
 
 ## Comment exécuter
@@ -18,13 +18,13 @@ mvn clean package
 
 ```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
-déc. 23, 2018 8:06:54 PM org.glassfish.grizzly.http.server.NetworkListener start
+janv. 21, 2022 6:42:37 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8026]
-déc. 23, 2018 8:06:54 PM org.glassfish.grizzly.http.server.HttpServer start
+janv. 21, 2022 6:42:37 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-déc. 23, 2018 8:06:54 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:42:37 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket Registered apps: URLs all start with ws://localhost:8026
-déc. 23, 2018 8:06:54 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:42:37 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket server started.
 Tyrus app started available at ws://localhost:8026/chatwebsocket
 Hit enter to stop it...

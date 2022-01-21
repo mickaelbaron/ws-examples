@@ -4,13 +4,13 @@ import java.net.URI;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
-
 import org.glassfish.tyrus.client.ClientManager;
+
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.Session;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)

@@ -3,11 +3,11 @@ package fr.mickaelbaron.chatjsonwebsocket;
 import java.io.IOException;
 import java.util.Date;
 
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.EndpointConfig;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.websocket.DecodeException;
+import jakarta.websocket.Decoder;
+import jakarta.websocket.EndpointConfig;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)

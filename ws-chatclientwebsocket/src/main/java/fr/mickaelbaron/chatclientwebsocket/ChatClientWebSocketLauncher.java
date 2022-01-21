@@ -4,9 +4,9 @@ import java.net.URI;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import javax.websocket.Session;
-
 import org.glassfish.tyrus.client.ClientManager;
+
+import jakarta.websocket.Session;
 
 /**
  * @author Mickael BARON (baron.mickael@gmail.com)

@@ -4,15 +4,14 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import javax.websocket.ClientEndpointConfig;
-import javax.websocket.DeploymentException;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
-
 import org.glassfish.tyrus.client.ClientManager;
 
+import jakarta.websocket.ClientEndpointConfig;
+import jakarta.websocket.DeploymentException;
+import jakarta.websocket.Endpoint;
+import jakarta.websocket.EndpointConfig;
+import jakarta.websocket.MessageHandler;
+import jakarta.websocket.Session;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;

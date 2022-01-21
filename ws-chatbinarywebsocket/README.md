@@ -1,6 +1,6 @@
 # Projet ws-chatwebsocket
 
-Cet exemple implémente un espace de discussion « chat » en utilisant la spécification JSR 356 et l'implémentation Tyrus. L'intérêt de cet exemple est de montrer comment transmettre des messages au format binaire.
+Cet exemple implémente un espace de discussion « chat » en utilisant la spécification Jakarta WebSocket (anciennement JSR 356) et l'implémentation Tyrus. L'intérêt de cet exemple est de montrer comment transmettre des messages au format binaire.
 
 Un client HTML/JavaScript a été développé pour implémenter le WebSocket client et afin de pouvoir tester notre développement (répertoire _static/_). Nous montrons également comment déployer les WebSockets serveurs comme une application Java classique par l'intermédiaire du serveur web Grizzly.
 
@@ -11,7 +11,7 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 * À la racine du projet, exécuter la ligne de commande suivante :
 
 ```console
-mvn clean package
+$ mvn clean package
 ```
 
 ## Comment exécuter
@@ -20,13 +20,13 @@ mvn clean package
 
 ```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
-déc. 23, 2018 8:16:27 PM org.glassfish.grizzly.http.server.NetworkListener start
+janv. 21, 2022 6:44:36 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8027]
-déc. 23, 2018 8:16:27 PM org.glassfish.grizzly.http.server.HttpServer start
+janv. 21, 2022 6:44:36 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-déc. 23, 2018 8:16:27 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:44:36 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket Registered apps: URLs all start with ws://localhost:8027
-déc. 23, 2018 8:16:27 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:44:36 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket server started.
 Tyrus app started available at ws://localhost:8027/chatwebsocket/chat
 Hit enter to stop it...

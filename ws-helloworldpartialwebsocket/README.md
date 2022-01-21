@@ -1,6 +1,6 @@
 # Projet ws-helloworldpartialwebsocket
 
-Cet exemple montre comment segmenter l'envoi de messages (WebSocket client vers un WebSocket serveur) en utilisant la spécification JSR 356 et l'implémentation Tyrus pour développer des WebSockets serveurs en Java.
+Cet exemple montre comment segmenter l'envoi de messages (WebSocket client vers un WebSocket serveur) en utilisant la spécification Jakarta WebSocket (anciennement JSR 356) et l'implémentation Tyrus pour développer des WebSockets serveurs en Java.
 
 Un client HTML/JavaScript a été développé pour implémenter le WebSocket client et afin de pouvoir tester notre développement (répertoire _static/_). Le client permet de générer des messages de tailles importantes. Nous montrons également comment déployer les WebSockets serveurs comme une application Java classique par l'intermédiaire du serveur web Grizzly.
 
@@ -11,7 +11,7 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 * À la racine du projet, exécuter la ligne de commande suivante :
 
 ```console
-mvn clean package
+$ mvn clean package
 ```
 
 ## Comment exécuter
@@ -20,13 +20,13 @@ mvn clean package
 
 ```console
 $ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldpartialwebsocket.HelloworldPartialWebSocketLauncher
-déc. 23, 2018 11:17:41 PM org.glassfish.grizzly.http.server.NetworkListener start
+janv. 21, 2022 6:46:58 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8028]
-déc. 23, 2018 11:17:41 PM org.glassfish.grizzly.http.server.HttpServer start
+janv. 21, 2022 6:46:58 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-déc. 23, 2018 11:17:42 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:46:58 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket Registered apps: URLs all start with ws://localhost:8028
-déc. 23, 2018 11:17:42 PM org.glassfish.tyrus.server.Server start
+janv. 21, 2022 6:46:58 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket server started.
 Tyrus app started available at ws://localhost:8028/helloworldpartialwebsocket
 Hit enter to stop it...

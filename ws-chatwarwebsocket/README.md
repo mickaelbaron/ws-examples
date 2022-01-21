@@ -9,32 +9,32 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 * À la racine du projet, exécuter la ligne de commande suivante :
 
 ```console
-mvn clean package
+$ mvn clean package
 ```
 
 ## Comment déployer
 
-* Exécuter la ligne de commande suivante pour télécharger l'image Docker correspondant à la version 9 de Tomcat s'exécutant sous un JRE 11
+* Exécuter la ligne de commande suivante pour télécharger l'image Docker correspondant à la version 10 de Tomcat s'exécutant sous un JRE 11 :
 
 ```console
-docker pull tomcat:9-jre11-slim
+$ docker pull tomcat:jre11-openjdk-slim
 ```
 
-* Exécuter la ligne de commande suivante permettant de créer un conteneur Docker
+* Exécuter la ligne de commande suivante permettant de créer un conteneur Docker :
 
 ```console
-docker run --rm --name chatwarwebsocket-tomcat -v $(pwd)/target/chatwarwebsocket.war:/usr/local/tomcat/webapps/chatwarwebsocket.war -it -p 8080:8080 tomcat:9-jre11-slim
+$ docker run --rm --name chatwarwebsocket-tomcat -v $(pwd)/target/chatwarwebsocket.war:/usr/local/tomcat/webapps/chatwarwebsocket.war -it -p 8080:8080 tomcat:jre11-openjdk-slim
 ```
 
 ## Tester
 
 Un WebSocket serveur est disponible à partir de cette URL :
 
-* <ws://localhost:8080/chatwarwebsocket/chat/{chatroom}/{username}> : permet de se connecter au WebSocket serveur en indiquant un salon et un nom d'utilisatuer.
+* <ws://localhost:8080/chatwarwebsocket/chat/{chatroom}/{username}> : permet de se connecter au WebSocket serveur en indiquant un salon et un nom d'utilisateur.
 
 Pour tester :
 
-* depuis un navigateur web, saisir l'URL suivante : <http://localhost:8080/> ;
+* depuis un navigateur web, saisir l'URL suivante : <http://localhost:8080/chatwarwebsocket> ;
 
 * modificer le champ _Location_ en prenant l'une des deux URL présentées ci-dessus ;
 
@@ -46,4 +46,4 @@ Pour tester :
 
 * visualiser le résultat au format JSON sur la zone _Messages_.
 
-**Note:** pour s'apercevoir de l'intérêt des WebSockets, ouvrir plusieurs onglets via l'adresse <http://localhost:8080/>. Cela simulera la présence de plusieurs clients.
+**Note:** pour s'apercevoir de l'intérêt des WebSockets, ouvrir plusieurs onglets via l'adresse <http://localhost:8080/chatwarwebsocket>. Cela simulera la présence de plusieurs clients.
