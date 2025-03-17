@@ -6,44 +6,54 @@ Nous montrons également comment déployer les WebSockets clients comme une appl
 
 ## Démarrer le WebSocket serveur du projet _ws-chatwebsocket_
 
-* Se déplacer à la racine du projet _ws-chatwebsocket_
+- Se déplacer à la racine du projet _ws-chatwebsocket_
 
-* Compiler le projet
+- Compiler le projet
 
-```console
-$ mvn clean package
+```bash
+mvn clean package
 ```
 
-* Exécuter le projet
+- Exécuter le projet
 
-```console
-java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldwebsocket.HelloworldWebSocketLauncher
-janv. 21, 2022 6:53:34 PM org.glassfish.grizzly.http.server.NetworkListener start
-INFO: Started listener bound to [0.0.0.0:8025]
-janv. 21, 2022 6:53:34 PM org.glassfish.grizzly.http.server.HttpServer start
+```bash
+java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatwebsocket.ChatWebSocketLauncher
+```
+
+La sortie console attendue :
+
+```bash
+mars 17, 2025 4:00:59 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [0.0.0.0:8026]
+mars 17, 2025 4:01:00 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-janv. 21, 2022 6:53:34 PM org.glassfish.tyrus.server.Server start
-INFO: WebSocket Registered apps: URLs all start with ws://localhost:8025
-janv. 21, 2022 6:53:34 PM org.glassfish.tyrus.server.Server start
+mars 17, 2025 4:01:00 PM org.glassfish.tyrus.server.Server start
+INFO: WebSocket Registered apps: URLs all start with ws://localhost:8026
+mars 17, 2025 4:01:00 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket server started.
-Tyrus app started available at ws://localhost:8025/helloworldwebsocket
+Tyrus app started available at ws://localhost:8026/chatwebsocket
 Hit enter to stop it...
 ```
 
 ## Comment compiler
 
-* À la racine du projet _ws-chatclientwebsocket_, exécuter la ligne de commande suivante :
+- À la racine du projet _ws-chatclientwebsocket_, exécuter la ligne de commande suivante :
 
-```console
-$ mvn clean package
+```bash
+mvn clean package
 ```
 
 ## Comment exécuter le client via l'annotation `@ClientEndpoint`
 
-* Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
+- Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```console
-$ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatclientwebsocket.ChatClientWebSocketLauncher
+```bash
+java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatclientwebsocket.ChatClientWebSocketLauncher
+```
+
+La sortie console attendue :
+
+```bash
 ChatClientEndpoint.onOpen()
 ChatClientEndpoint.onMessage()
 Received message: My First Message (from: mickaelbaron)
@@ -51,10 +61,15 @@ Received message: My First Message (from: mickaelbaron)
 
 ## Comment exécuter le client via l'API `Endpoint`
 
-* Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
+- Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```console
-$ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatclientwebsocket.ChatClientWebSocketUsingAPILauncher
+```bash
+java -cp "target/classes:target/dependency/*" fr.mickaelbaron.chatclientwebsocket.ChatClientWebSocketUsingAPILauncher
+```
+
+La sortie console attendue :
+
+```bash
 ChatClientWebSocketUsingAPILauncher.onOpen()
 ChatClientWebSocketUsingAPILauncher.onMessage()
 Received message: My First Message (from: mickaelbaron)

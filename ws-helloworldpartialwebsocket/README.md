@@ -8,25 +8,30 @@ Un client HTML/JavaScript a été développé pour implémenter le WebSocket cli
 
 ## Comment compiler
 
-* À la racine du projet, exécuter la ligne de commande suivante :
+- À la racine du projet, exécuter la ligne de commande suivante :
 
-```console
-$ mvn clean package
+```bash
+mvn clean package
 ```
 
 ## Comment exécuter
 
-* Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
+- Toujours depuis la racine du projet, exécuter la ligne de commande suivante :
 
-```console
-$ java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldpartialwebsocket.HelloworldPartialWebSocketLauncher
-janv. 21, 2022 6:46:58 PM org.glassfish.grizzly.http.server.NetworkListener start
+```bash
+java -cp "target/classes:target/dependency/*" fr.mickaelbaron.helloworldpartialwebsocket.HelloworldPartialWebSocketLauncher
+```
+
+La sortie console attendue :
+
+```bash
+mars 17, 2025 3:49:32 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8028]
-janv. 21, 2022 6:46:58 PM org.glassfish.grizzly.http.server.HttpServer start
+mars 17, 2025 3:49:32 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-janv. 21, 2022 6:46:58 PM org.glassfish.tyrus.server.Server start
+mars 17, 2025 3:49:32 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket Registered apps: URLs all start with ws://localhost:8028
-janv. 21, 2022 6:46:58 PM org.glassfish.tyrus.server.Server start
+mars 17, 2025 3:49:32 PM org.glassfish.tyrus.server.Server start
 INFO: WebSocket server started.
 Tyrus app started available at ws://localhost:8028/helloworldpartialwebsocket
 Hit enter to stop it...
@@ -36,19 +41,19 @@ Hit enter to stop it...
 
 Deux WebSockets serveurs sont disponibles respectivement à partir de ces URL :
 
-* <ws://localhost:8028/helloworldpartialwebsocket/hellopartial> : WebSocket serveur permettant de recevoir un message de manière segmenter ;
-* <ws://localhost:8028/helloworldpartialwebsocket/hellomessagemax> : WebSocket serveur où une taille limite du message est fixée.
+- <ws://localhost:8028/helloworldpartialwebsocket/hellopartial> : WebSocket serveur permettant de recevoir un message de manière segmenter ;
+- <ws://localhost:8028/helloworldpartialwebsocket/hellomessagemax> : WebSocket serveur où une taille limite du message est fixée.
 
 Pour tester :
 
-* depuis un navigateur web, saisir l'URL suivante : <http://localhost:8028/> ;
+- depuis un navigateur web, saisir l'URL suivante : <http://localhost:8028/> ;
 
-* modificer le champ _Location_ en prenant l'une des deux URL présentées ci-dessus ;
+- modificer le champ *Location* en prenant l'une des deux URL présentées ci-dessus ;
 
-* appuyer sur le bouton **Connecter** ;
+- appuyer sur le bouton **Connecter** ;
 
-* saisir une valeur (en octet) dans l'un des deux champs : _Size (bytes) for text data_ ou _Size (bytes) for binary data_ ;
+- saisir une valeur (en octet) dans l'un des deux champs : _Size (bytes) for text data_ ou *Size (bytes) for binary data* ;
 
-* appuyer sur l'un des deux boutons **Send** ;
+- appuyer sur l'un des deux boutons **Send** ;
 
-* visualiser le résultat sur la zone _Messages_.
+- visualiser le résultat sur la zone _Messages_.
